@@ -2,7 +2,7 @@
 #   A hubot script to play Uno, similar to IRC days gone by
 #
 # Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
+#   
 #
 # Commands:
 #   !uno - Start an uno game. The player that types this becomes player 1.
@@ -21,7 +21,7 @@
 #   !top10 - Shows the top 10 uno players and their wins.
 #
 # Notes:
-#   <optional notes required for the script>
+#   
 #
 # Author:
 #   James McCollum <jmccollum@signet-studios.com>
@@ -32,3 +32,8 @@ module.exports = (robot) ->
 
   robot.hear /orly/, (res) ->
     res.send "yarly"
+
+  robot.hear /!uno/, (res) ->
+    from = msg.message.user.name.toLowerCase()
+    room = msg.message.room
+    res.send "#{from} has started UNO. Type !join to join the game."

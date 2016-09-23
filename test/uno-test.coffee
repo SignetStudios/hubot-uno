@@ -25,3 +25,10 @@ describe 'uno', ->
         ['bob', 'just wanted to say orly']
         ['hubot', 'yarly']
       ]
+
+  it 'starts a new game with !uno', ->
+    @room.user.say('player1', '!uno').then =>
+      expect(@room.messages).to.eql [
+        ['player1', '!uno']
+        ['hubot', 'player1 has started UNO. Type !join to join the game.']
+      ]
