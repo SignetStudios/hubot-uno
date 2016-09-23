@@ -30,10 +30,7 @@ module.exports = (robot) ->
   robot.respond /hello/, (res) ->
     res.reply "hello!"
 
-  robot.hear /orly/, (res) ->
-    res.send "yarly"
-
-  robot.hear /!uno/, (res) ->
+  robot.hear /!uno/, (msg) ->
     from = msg.message.user.name.toLowerCase()
     room = msg.message.room
     res.send "#{from} has started UNO. Type !join to join the game."
