@@ -1,7 +1,7 @@
 var Helper = require('hubot-test-helper'),
 	chai = require('chai'),
 	expect = chai.expect,
-	helper = new Helper('../src/uno.coffee');
+	helper = new Helper('../src/uno.js');
 	
 describe('uno', function(){
 	var room;
